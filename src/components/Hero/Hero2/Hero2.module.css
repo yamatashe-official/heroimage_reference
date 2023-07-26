@@ -1,0 +1,38 @@
+.overall {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-repeat: no-repeat;
+  background-image: url("/public/images/skybackground.jpg");
+  background-position: -1000px 0px;
+  animation: slideRight;
+  animation-duration: 60s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease;
+  /* filter: blur(1px); */
+}
+
+@keyframes slideRight {
+  from {
+    background-position: top;
+    background-size: 3000px;
+  }
+  to {
+    background-position: -100px 0px;
+    background-size: 2750px;
+  }
+}
+
+.title {
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: bold;
+  position: relative;
+  overflow: visible;
+  color: white;
+  border: 10px solid white;
+  padding: 20px;
+}

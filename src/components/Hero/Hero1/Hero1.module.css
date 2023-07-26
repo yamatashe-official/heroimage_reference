@@ -1,0 +1,94 @@
+.overall {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  background: rgb(25, 86, 124);
+  grid-template-columns: 1fr 1fr;
+  /* clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%); */
+  /* background-image: "link to some background image here - - "; */
+}
+
+.gridLeft,
+.gridRight {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/*everything related to .gridLeft element*/
+.gridLeft {
+  padding: 0px 25%;
+}
+
+.title,
+.subText {
+  color: white;
+}
+
+.title {
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: bold;
+  position: relative;
+  overflow: visible;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  width: clamp(1.2rem, 2.2vw, 2.2rem);
+  height: 2px;
+  /* background: black; */
+  background: white;
+  left: 0;
+  bottom: -1px;
+  z-index: 1;
+}
+
+.subText {
+  margin: 50px 0px;
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+}
+
+.link {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  background: white;
+  width: max-content;
+  padding: 10px 30px;
+  border-radius: 50px;
+  transition: 0.2s ease;
+}
+
+.link:hover,
+.link:focus {
+  cursor: pointer;
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/*everything related to .gridRight element*/
+.gridRight {
+  /* change whatever is in there to be representative of whatever you want in this container */
+  background-image: url("https://source.unsplash.com/random");
+}
+
+@media screen and (max-width: 800px) {
+  .overall {
+    grid-template-columns: 1fr;
+    height: 100vh;
+  }
+
+  .gridLeft,
+  .gridRight {
+    height: 100vh;
+  }
+
+  .gridRight {
+    order: -1;
+  }
+
+  .gridLeft {
+    padding: 0px 20%;
+  }
+}

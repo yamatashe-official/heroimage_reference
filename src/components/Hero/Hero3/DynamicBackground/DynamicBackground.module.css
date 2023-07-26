@@ -1,0 +1,25 @@
+.overall {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+  overflow: hidden;
+}
+
+.dot {
+  animation: move infinite;
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(10px, 10px);
+    opacity: 0.1;
+    /* border-radius: 0%; */
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}

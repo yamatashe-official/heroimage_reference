@@ -1,0 +1,32 @@
+.overall {
+  height: clamp(60px, 9vw, 70px);
+  width: clamp(30px, 5vw, 40px);
+  /* background: green; */
+  position: absolute;
+  bottom: 100px;
+  border-radius: 50px;
+  border: 5px solid white;
+}
+
+.overall::after {
+  content: "";
+  position: absolute;
+  background: white;
+  width: 10px;
+  height: 10px;
+  left: 0;
+  right: 0;
+  /* top: 70%; */
+  margin: 0px auto;
+  border-radius: 50px;
+  animation: scrollToggle 2s ease infinite;
+}
+
+@keyframes scrollToggle {
+  from {
+    top: 10%;
+  }
+  to {
+    top: 70%;
+  }
+}

@@ -1,0 +1,41 @@
+.overall {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: yellow;
+}
+.companyName {
+  color: white;
+  font-weight: 900;
+  font-size: clamp(1rem, 10vw, 10rem);
+  position: relative;
+  -webkit-background-clip: text;
+  background-size: 25%;
+  background-position: 10px;
+  animation: wavyMove;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  border-top: 10px solid black;
+  border-bottom: 10px solid black;
+  padding: 10px;
+  filter: drop-shadow(0, 0, 0);
+  transition: transform 5s ease;
+  color: black;
+}
+
+.companyName:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+@keyframes wavyMove {
+  from {
+    background-position: -10px 0px;
+  }
+  to {
+    background-position: 10px 4px;
+  }
+}

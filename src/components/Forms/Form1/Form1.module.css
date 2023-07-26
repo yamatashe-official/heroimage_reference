@@ -1,0 +1,85 @@
+.formHolder {
+  width: 65%;
+  height: 70%;
+  background: white;
+  padding: 60px;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.selectors,
+.inputText,
+.submit,
+.precaution {
+  margin-top: 20px;
+}
+
+.selectors {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 40%;
+}
+
+.radioHolder {
+  display: flex;
+}
+
+.radioLabel {
+  font-size: clamp(10px, 1vw, 20px);
+  margin-left: 5px;
+  max-lines: 1;
+}
+
+.name {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.textInputs {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.inputText,
+.submit {
+  transition: 0.2s ease;
+}
+
+.inputText {
+  background: lightgrey;
+  border: none;
+  padding: 25px;
+}
+.inputText:focus {
+  /* border: 1px solid black; */
+  outline: none;
+  background: black;
+  color: white;
+}
+.inputText:focus ::placeholder {
+  color: white;
+}
+
+.precaution {
+  font-size: 10px;
+}
+
+.submit {
+  padding: 10px 30px;
+  border: none;
+  background: black;
+  color: white;
+  font-weight: bold;
+}
+
+.submit:hover,
+.submit:focus {
+  cursor: pointer;
+  opacity: 0.9;
+  transform: scale(1.05);
+}
