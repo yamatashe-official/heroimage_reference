@@ -1,0 +1,35 @@
+.overall {
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  color: white;
+  position: relative;
+  border: 5px solid white;
+  padding: 20px;
+  font-size: clamp(10px, 3vw, 30px);
+}
+
+/* .text::before,
+.text::after {
+  width: 20%;
+  height: 5px;
+  background: white;
+  content: "";
+  position: absolute;
+  overflow: visible;
+}
+
+.text::before {
+  top: -2px;
+  left: 0;
+}
+.text::after {
+  bottom: -2px;
+  right: 0;
+} */
